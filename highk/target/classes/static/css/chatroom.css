@@ -1,0 +1,147 @@
+/* Overall chat room styling */
+.chat-room {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #008000, #b3ffcc); /* Soft natural gradient */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Removed redundant fallback as most modern browsers support gradients */
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black; /* Text stroke for modern browsers */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Fallback for browsers that don’t support text-stroke */
+}
+
+.messages {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start; /* Improved alignment for messages */
+    margin: 8px 0;
+}
+
+.message .user {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #004d00; /* Darker green for better contrast */
+}
+
+.message-content {
+    padding: 10px 15px;
+    background-color: #e6ffe6;
+    border-radius: 10px;
+    position: relative;
+    max-width: 70%;
+}
+
+/* Styling for your messages */
+.message-content.you {
+    background-color: #cce6ff;
+    align-self: flex-end;
+}
+
+/* Message arrow */
+.message-content:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 0;
+    height: 0;
+}
+
+.message-content.you:before {
+    right: -10px;
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #cce6ff transparent transparent;
+}
+
+.message-content:not(.you):before {
+    left: -10px;
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #e6ffe6;
+}
+
+/* Input and button styles */
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 85%;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+button {
+    padding: 12px;
+    margin-left: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Back and Logout button styles */
+.back-button,
+.logout-button {
+    position: absolute;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.back-button {
+    top: 20px;
+    background-color: #000000;
+}
+
+.logout-button {
+    top: 60px; /* Adjusted spacing to avoid overlap */
+    background-color: #000000;
+}
+
+.back-button:hover,
+.logout-button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .chat-room {
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 60px); /* Adjust width considering button size */
+    }
+
+    .back-button,
+    .logout-button {
+        position: static; /* Avoid fixed positioning issues on small screens */
+        margin-bottom: 10px;
+    }
+}

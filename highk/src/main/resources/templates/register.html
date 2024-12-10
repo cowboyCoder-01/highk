@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highk - Register</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- Link to CSS in static folder -->
+</head>
+<body>
+    <h1>Highk App</h1>
+    <div class="login-container">
+        <h2>Register</h2>
+        <form action="/submit-registration" method="POST"> <!-- Updated to match Spring Boot endpoint -->
+            <div class="input-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="input-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Register</button>
+            <p class="register-link">Already have an account? <a href="index">Login here</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>

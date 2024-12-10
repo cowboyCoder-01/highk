@@ -1,0 +1,12 @@
+com\highk\controller\ChatController.class
+com\highk\controller\DashboardController.class
+com\highk\controller\RegisterController.class
+com\highk\model\User.class
+com\highk\DatabaseService.class
+com\highk\controller\ChatroomController.class
+com\highk\service\UserService.class
+com\highk\controller\HomeController.class
+com\highk\config\WebSocketConfig.class
+com\highk\HighkWebAppApplication.class
+com\highk\repository\UserRepository.class
+com\highk\model\ChatMessage.class

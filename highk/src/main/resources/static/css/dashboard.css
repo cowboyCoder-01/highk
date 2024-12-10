@@ -1,0 +1,127 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #008000;
+    background-color: #edf2f7;
+}
+
+.highlight {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    color: #3c3c3c;
+}
+
+.dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Carousel Styling */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Trail List Styling */
+.trail-list {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    justify-content: space-between; /* Ensure space between the trails */
+}
+
+.trail {
+    position: relative;
+    color: #333;
+    background: linear-gradient(145deg, #f4f4f4, #e0e0e0);
+    flex: 0 0 45%;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 0 17px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-sizing: border-box;
+    overflow: hidden; /* Keep everything within the bounds */
+}
+
+.trail:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.trail:hover img {
+    opacity: 1;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.logout-button:hover {
+    background-color: #45a049;
+}
+
+/* Star Rating Styling */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 24px;
+    color: #060606;
+    transition: color 0.3s;
+}
+
+.star.selected {
+    color: #FFD700; /* Gold for selected stars */
+}
